@@ -1,0 +1,150 @@
+.estrutura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+
+    background-image: url("https://th.bing.com/th/id/R.a5e4711bb70c0d3ef491b2ae6e0133ce?rik=x0SOSEYT1m5RKA&riu=http%3a%2f%2fwww.hdwallpapers.in%2fwalls%2fwindows_xp_bliss-wide.jpg&ehk=oiCKatCi6BRQDvYwL4rHz2rlIFJgPF3QoT%2fPrnNdIRk%3d&risl=&pid=ImgRaw&r=0");
+    background-size: cover;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pagina1 {
+    width: 400px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #d4d0c8;
+
+    box-shadow:
+        inset -1px -1px #808080,
+        inset 1px 1px #ffffff,
+        2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4px 6px;
+
+    border-radius: 8px 8px 0 0;
+
+    background: linear-gradient(to right, #0f4fcc, #2b88d8, #0f4fcc);
+
+    color: white;
+}
+
+.barbutton {
+    display: flex;
+    gap: 4px;
+
+    margin-right: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.96);
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.barbutton button {
+    width: 22px;
+    height: 18px;
+
+    font-size: 10px;
+}
+
+.btn-minimize {
+    background: linear-gradient(to bottom, #f0e68c, #c4a51d);
+}
+
+.btn-maximize {
+    background: linear-gradient(to bottom, #a0d8a0, #4caf50);
+}
+
+.btn-close {
+    background: linear-gradient(to bottom, #ff8080, #cc0000);
+
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 20px;
+}
+
+.content button {
+    align-self: flex-start;
+
+    width: 60px;
+    height: 30px;
+
+    border: 1px solid #cecbcb;
+    border-radius: 6px;
+
+    color: rgb(7, 7, 7);
+}
+
+.content input {
+    width: 95%;
+
+    padding: 6px 10px;
+
+    border: 1px solid #cecbcb;
+    border-radius: 4px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+.content input:focus {
+    outline: none;
+}
+
+.containerpg2 {
+    width: 400px;
+    height: 600px;
+
+    box-sizing: border-box;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #d4d0c8;
+
+    box-shadow:
+        inset -1px -1px #808080,
+        inset 1px 1px #ffffff,
+        2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.cabecalho-rastreio {
+    padding: 20px;
+}
+
+.informacoes {
+    padding: 20px;
+}

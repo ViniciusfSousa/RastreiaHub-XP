@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RastreiaHub XP</title>
+    
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="estrutura">
+
+    <div class="pagina1" id="pagina1">
+
+        <div class="title-bar">
+
+            <span>📦 RastreiaHub.XP</span>
+            <div class="barbutton">
+                <button class="btn-minimize">_</button>
+                <button class="btn-maximize">□</button>
+                <button class="btn-close">X</button>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <p>Digite o codigo da encomenda</p>
+
+            <input type="text" placeholder="AA123456789BR" maxlength="13" id="input-codigo">
+
+            <button class="btn-buscar" id="btn-buscar">Buscar</button>
+
+        </div>
+
+    </div>
+
+    <div class="pagina2" style="display: none" id="pagina2">
+
+       <div class="containerpg2">
+
+            <div class="title-bar">
+
+                <span>📦 RastreiaHub.XP</span>
+                <div class="barbutton">
+                    <button class="btn-minimize">_</button>
+                    <button class="btn-maximize">□</button>
+                    <button class="btn-close">X</button>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <button class="btn-voltar" id="btn-voltar">Voltar</button>
+
+            </div>
+            
+            <div class="cabecalho-rastreio">
+                <p>Código: <span id="codigo-rastreio"></span></p>
+                <p>Status: <span id="status-rastreio"></span></p> 
+            </div>
+            <div class="informacoes">
+                <p>Origem: <span id="origem-rastreio"></span></p>
+                <p>Destino: <span id="destino-rastreio"></span></p>
+                <p>Última atualização: <span id="ultima-atualizacao"></span></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="static/script.js"></script>
+</body>
+
+</html>
