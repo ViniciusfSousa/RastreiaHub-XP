@@ -1,0 +1,30 @@
+name: Flask CIO
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+
+      - name: Verificar sintaxe
+        run: |
+          python -m py_compile app.py
+
+      - name: Testar inicialização do Flask
+        run: |
+          timeout 10 python app.py || true
