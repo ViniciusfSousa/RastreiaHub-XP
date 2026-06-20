@@ -7,14 +7,14 @@
     
     <link rel="stylesheet" href="static/style.css">
 </head>
-<body class="estrutura">
+<body class="app-container">
 
-    <div class="pagina1" id="pagina1">
+    <div class="search-screen" id="search-screen">
 
         <div class="title-bar">
 
             <span>📦 RastreiaHub.XP</span>
-            <div class="barbutton">
+            <div class="window-controls">
                 <button class="btn-minimize">_</button>
                 <button class="btn-maximize">□</button>
                 <button class="btn-close">X</button>
@@ -25,22 +25,22 @@
 
             <p>Digite o codigo da encomenda</p>
 
-            <input type="text" placeholder="AA123456789BR" maxlength="13" id="input-codigo">
+            <input type="text" placeholder="AA123456789BR" maxlength="13" id="tracking-code-input">
 
-            <button class="btn-buscar" id="btn-buscar">Buscar</button>
+            <button class="btn-seacrh" id="btn-search">Buscar</button>
 
         </div>
 
     </div>
 
-    <div class="pagina2" style="display: none" id="pagina2">
+    <div class="tracking-screen" style="display: none" id="tracking-screen">
 
-       <div class="containerpg2">
+       <div class="tracking-container">
 
             <div class="title-bar">
 
                 <span>📦 RastreiaHub.XP</span>
-                <div class="barbutton">
+                <div class="window-controls">
                     <button class="btn-minimize">_</button>
                     <button class="btn-maximize">□</button>
                     <button class="btn-close">X</button>
@@ -49,18 +49,18 @@
 
             <div class="content">
 
-                <button class="btn-voltar" id="btn-voltar">Voltar</button>
+                <button class="btn-back" id="btn-back">Voltar</button>
 
             </div>
             
-            <div class="cabecalho-rastreio">
-                <p>Código: <span id="codigo-rastreio"></span></p>
-                <p>Status: <span id="status-rastreio"></span></p> 
+            <div class="tracking-header">
+                <p>Código: <span id="tracking-code"></span></p>
+                <p>Status: <span id="tracking-status"></span></p> 
             </div>
-            <div class="informacoes">
-                <p>Origem: <span id="origem-rastreio"></span></p>
-                <p>Destino: <span id="destino-rastreio"></span></p>
-                <p>Última atualização: <span id="ultima-atualizacao"></span></p>
+            <div class="tracking-details">
+                <p>Origem: <span id="tracking-origin"></span></p>
+                <p>Destino: <span id="tracking-destination"></span></p>
+                <p>Última atualização: <span id="last-update"></span></p>
             </div>
         </div>
 

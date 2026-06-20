@@ -1,44 +1,43 @@
-const input = document.getElementById("input-codigo");
+const trackingCodeInput = document.getElementById("tracking-code-input");
 
-input.addEventListener("beforeinput", (e) => {
-    if (e.data && /[^a-zA-Z0-9]/.test(e.data)) {
-        e.preventDefault();
+trackingCodeInput.addEventListener("beforeinput", (event) => {
+    if (event.data && /[^a-zA-Z0-9]/.test(event.data)) {
+        event.preventDefault();
     }
 });
 
-const telaBusca = document.getElementById("pagina1");
-const telaRastreio = document.getElementById("pagina2");
+const searchScreen = document.getElementById("search-screen");
+const trackingScreen = document.getElementById("tracking-screen");
 
-const btnBuscar = document.getElementById("btn-buscar");
-const btnVoltar = document.getElementById("btn-voltar");
+const searchButton = document.getElementById("btn-search");
+const backButton = document.getElementById("btn-back");
 
-const rastreio = {
-    codigo: "AB123456789BR",
+const trackingData = {
+    code: "AB123456789BR",
     status: "Em trânsito",
-    origem: "Curitiba - PR",
-    destino: "São Paulo - SP",
-    ultimaAtualizacao: "14/06/2026 - 15:30"
+    origin: "Curitiba - PR",
+    destination: "São Paulo - SP",
+    lastUpdate: "14/06/2026 - 15:30"
 };
 
-btnBuscar.addEventListener("click", () => {
-
-    if (input.value === rastreio.codigo) {
-
-        document.getElementById("codigo-rastreio").textContent = rastreio.codigo;
-        document.getElementById("status-rastreio").textContent = rastreio.status;
-        document.getElementById("origem-rastreio").textContent = rastreio.origem;
-        document.getElementById("destino-rastreio").textContent = rastreio.destino;
-        document.getElementById("ultima-atualizacao").textContent = rastreio.ultimaAtualizacao;
-
-        telaBusca.style.display = "none";
-        telaRastreio.style.display = "block";
-    }
+searchButton.addEventListener("click", async () => {
     
+    document.getElementById("tracking-code").textContent = data.code;
+    document.getElementById("tracking-status").textContent = data.status;
+    document.getElementById("tracking-origin").textContent = data.origin;
+    document.getElementById("tracking-destination").textContent = data.destination;
+    document.getElementById("last-update").textContent = data.lastUpdate;
+
+    searchScreen.style.display = "none";
+    trackingScreen.style.display = "block";
+
 });
 
-btnVoltar.addEventListener("click", () => {
-    input.value = "";
+backButton.addEventListener("click", () => {
 
-    telaRastreio.style.display = "none";
-    telaBusca.style.display = "block";
+    trackingCodeInput.value = "";
+
+    trackingScreen.style.display = "none";
+    searchScreen.style.display = "block";
+
 });
