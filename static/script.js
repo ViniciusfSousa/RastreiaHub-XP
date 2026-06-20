@@ -21,7 +21,12 @@ const trackingData = {
 };
 
 searchButton.addEventListener("click", async () => {
-    
+
+    const code = trackingCodeInput.value.trim();
+
+    const response = await fetch(`/tracking/${code}`);
+    const data = await response.json();
+
     document.getElementById("tracking-code").textContent = data.code;
     document.getElementById("tracking-status").textContent = data.status;
     document.getElementById("tracking-origin").textContent = data.origin;
